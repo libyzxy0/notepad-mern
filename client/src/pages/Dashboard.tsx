@@ -36,18 +36,18 @@ export default function Dashboard() {
   const toggleCreate = () => {
     document.getElementById('create-note').showModal();
   }
-  function formatDate(timestamp) {
+  function formatDate(timestamp: number) {
     const date = new Date(timestamp);
-    const options = {
+    const options: Intl.DateTimeFormatOptions = {
         year: 'numeric',
-        month: 'short',
+        month: '2-digit',
         day: '2-digit',
-        hour: 'numeric',
-        minute: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
         hour12: true
     };
     return date.toLocaleString('en-US', options);
-  }
+}
   
   const handleLongPress = (nid) => {
     //Handle long press on card

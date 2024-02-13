@@ -58,8 +58,8 @@ export default function Login() {
        <div className="flex flex-col items-center w-full mt-8">
        
        <div className="flex flex-col justify-center w-[80%] mt-5">
-       <label className="text-gray-300 mb-1">Username</label>
-       <input value={username} onChange={handleChangeUsername} type="text" className="outline-none border-none w-full py-3 bg-gray-700 ring-gray-700 ring-1 focus:ring-purple-400 px-4 rounded text-white" placeholder="Enter your username" />
+       <label className="text-gray-300 mb-1">Username/Email</label>
+       <input value={username} onChange={handleChangeUsername} type="text" className="outline-none border-none w-full py-3 bg-gray-700 ring-gray-700 ring-1 focus:ring-purple-400 px-4 rounded text-white" placeholder="Enter your username or email" />
        </div>
        <div className="flex flex-col justify-center w-[80%] mt-5">
        <label className="text-gray-300 mb-1">Password</label>

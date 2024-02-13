@@ -21,7 +21,7 @@ const login = asyncWrapper(async (req, res) => {
     //Check captcha
   }
   
-  const user = await User.findOne({ username });
+  const user = await User.findOne({ username }).select('username email');
   if(!user) return res.status(404).send({ message: MESSAGES.INCORRECT_USERNAME });
   if(!bcrypt.compareSync(password, user.password)) return res.status(401).send({ message: MESSAGES.INCORRECT_PASSWORD });
   

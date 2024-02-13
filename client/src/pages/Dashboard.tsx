@@ -34,8 +34,11 @@ export default function Dashboard() {
   }, [isAuthenticated, isLoading]);
   
   const toggleCreate = () => {
-    document.getElementById('create-note').showModal();
+    const createNoteDialog = document.getElementById('create-note') as HTMLDialogElement;
+    createNoteDialog.showModal();
   }
+
+  
   function formatDate(timestamp: number) {
     const date = new Date(timestamp);
     const options: Intl.DateTimeFormatOptions = {

@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000/api/notes';
+//const baseUrl = 'http://localhost:3000/api/notes';
+const baseUrl = 'https://notepad-b.onrender.com/api/notes';
+
 
 const useCreateNote = () => {
   const [isLoading, setIsLoading] = useState(false);

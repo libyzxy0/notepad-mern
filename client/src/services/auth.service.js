@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
-const baseUrl = "http://localhost:3000/api/user";
+
+//const baseUrl = "http://localhost:3000/api/user";
+const baseUrl = "https://notepad-b.onrender.com/api/user";
+
 const useAuth = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState({});
